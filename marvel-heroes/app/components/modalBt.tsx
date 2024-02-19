@@ -1,7 +1,12 @@
-import React from "react";
+import React, { FC } from "react";
+import { Character } from "@/types/marvels";
 import {Button, Dialog, DialogHeader, DialogBody, DialogFooter} from "@material-tailwind/react";
+
+interface ModalProps {
+  character: Character
+}
  
-export function ModalBt() {
+export const ModalBt:FC<ModalProps> = ({ character }) => {
   const [open, setOpen] = React.useState(false);
  
   const handleOpen = () => setOpen(!open);
@@ -12,12 +17,9 @@ export function ModalBt() {
         Detalhes
       </Button>
       <Dialog placeholder={'Modal'} open={open} handler={handleOpen}>
-        <DialogHeader placeholder={'Titulo do Modal'}>Its a simple dialog.</DialogHeader>
+        <DialogHeader placeholder={'Titulo do Modal'}>{character.name}</DialogHeader>
         <DialogBody placeholder={'Mensagem completa do modal'}>
-          The key to more success is to have a lot of pillows. Put it this way,
-          it took me twenty five years to get these plants, twenty five years of
-          blood sweat and tears, and I&apos;m never giving up, I&apos;m just
-          getting started. I&apos;m up to something. Fan luv.
+          {character.description}
         </DialogBody>
         <DialogFooter placeholder={'Footer do Modal'}>
           <Button

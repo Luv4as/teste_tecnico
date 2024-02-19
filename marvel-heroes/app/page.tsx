@@ -4,21 +4,23 @@ import { getCharacters } from "@/utils/api";
 
 export default async function Home() {
   const characters = await getCharacters();
-  console.log(characters)
 
   return (
-    <div className="-ml-2">
-      <Navbar></Navbar>      
-      <div className="bg-black h-40 w-screen flex justify-center items-center ">
-        <h1 className="text-white">Bem vindo ao Marvel Heroes</h1>
-      </div>
-      <div className=" grid grid-cols-2 gap-4">
-        {/* {characters.results.map(character =>(
-          <ProfileCard key={character.id}></ProfileCard>
-        ))} */}
-        {/* <ProfileCard></ProfileCard>
-        <ProfileCard></ProfileCard> */}
+    <main className="-ml-2">
+      <Navbar></Navbar>    
+      <div>
+        <div className="flex flex-col justify-center items-center">
+          <h1 className="my-10">Bem vindo ao Marvel Heroes!</h1>
+          <p>Veja a lista completa de personagens disponíveis</p>
         </div>
-    </div>
+        <div className="flex justify-evenly items-center">
+          <div className=" grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {characters.results.map(character =>(
+              <ProfileCard key={character.id} character={character} ></ProfileCard>
+            ))}
+          </div>
+        </div>
+      </div>  
+    </main>
   );
 }
