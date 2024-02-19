@@ -4,6 +4,7 @@ Esse é um teste técnico para o processo seletivo de estágio para a empresa Me
 
 ## Tecnologias usadas
 * Typescript
+* Javascript
 * CSS
 * Next.js
 * Tailwind css
