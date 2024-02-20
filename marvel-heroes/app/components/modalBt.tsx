@@ -13,7 +13,7 @@ export const ModalBt:FC<ModalProps> = ({ character }) => {
  
   return (
     <div>
-      <Button placeholder={'Botão de detalhes'} onClick={handleOpen} variant="filled">
+      <Button placeholder={'Botão de detalhes'} onClick={handleOpen} variant="filled" color="deep-orange" className=" outline-none font-roboto">
         Detalhes
       </Button>
       <Dialog placeholder={'Modal'} open={open} handler={handleOpen}>
@@ -27,7 +27,7 @@ export const ModalBt:FC<ModalProps> = ({ character }) => {
             variant="outlined"
             color="red"
             onClick={handleOpen}
-            className="mr-1"
+            className="mr-1 font-roboto"
           >
             <span>Voltar</span>
           </Button>
