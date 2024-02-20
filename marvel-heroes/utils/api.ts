@@ -22,7 +22,7 @@ const handleResponse = async <T>(response: Response) => {
 }
 
 export const getCharacters = async (): Promise<CharacterDataWrapper> => {
-    const url = `${API_BASE_URL}/characters?${query}`;
+    const url = `${API_BASE_URL}/characters?&limit=99&${query}`;
     const response = await fetch(url);
     return handleResponse<CharacterDataWrapper>(response);
 }
