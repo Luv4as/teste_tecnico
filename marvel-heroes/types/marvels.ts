@@ -6,6 +6,15 @@ export interface Character {
         path: string,
         extension: string
     };
+    comics:{
+        available: number
+    }
+    stories:{
+        available: number
+    }
+    events:{
+        available: number
+    }
 }
 
 export interface CharacterDataWrapper {

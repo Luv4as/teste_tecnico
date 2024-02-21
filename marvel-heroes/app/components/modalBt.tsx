@@ -18,8 +18,22 @@ export const ModalBt:FC<ModalProps> = ({ character }) => {
       </Button>
       <Dialog placeholder={'Modal'} open={open} handler={handleOpen}>
         <DialogHeader placeholder={'Titulo do Modal'}>{character.name}</DialogHeader>
-        <DialogBody placeholder={'Mensagem completa do modal'}>
+        <DialogBody placeholder={'Mensagem completa do modal'} className="flex flex-col justify-center items-center">
           {character.description}
+          <div className="mt-5">
+            <ul className="list-disc">
+              <li className="">
+                N° of comics this character is featured: {character.comics.available}
+              </li>
+              <li className="">
+                N° of stories this character is featured: {character.stories.available}
+              </li>
+              <li className="">
+                N° of events where this character appeard in: {character.events.available}
+              </li>
+            </ul>
+          </div>
+          
         </DialogBody>
         <DialogFooter placeholder={'Footer do Modal'}>
           <Button
