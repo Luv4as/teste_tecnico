@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={roboto.className}>{children}
+      <body className={`${roboto.variable} ${bebas_neue.variable} ${archivo_black.variable}`}>{children}
       </body>
     </html>
   );

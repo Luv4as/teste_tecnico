@@ -17,8 +17,8 @@ export const ModalBt:FC<ModalProps> = ({ character }) => {
         Detalhes
       </Button>
       <Dialog placeholder={'Modal'} open={open} handler={handleOpen}>
-        <DialogHeader placeholder={'Titulo do Modal'}>{character.name}</DialogHeader>
-        <DialogBody placeholder={'Mensagem completa do modal'} className="flex flex-col justify-center items-center">
+        <DialogHeader placeholder={'Titulo do Modal'} className="font-archivo-black">{character.name}</DialogHeader>
+        <DialogBody placeholder={'Mensagem completa do modal'} className="flex flex-col justify-center items-center font-roboto font-normal">
           {character.description}
           <div className="mt-5">
             <ul className="list-disc">

@@ -36,12 +36,12 @@ import { ProfileCard } from "../components/profileCard";
             <Navbar></Navbar>
             <div>
                 <div className="flex flex-col justify-center items-center">
-                    <h1 className="my-10  ">BEM VINDO AO MARVEL HEROES!</h1>
+                    <h1 className="my-10 text-6xl font-bebas-neue ">BEM VINDO AO MARVEL HEROES!</h1>
                     <p className="font-medium">Pesquisa por &quot;{querySearch}&quot;</p>
                 </div>
                 {
                     isLoading ? <div className="flex justify-center items-center">
-                        <p className="text-5xl">Carregando...</p>
+                        <p className="text-3xl mt-40">Carregando...</p>
                     </div> : (
                         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                             {characters.map(character =>(

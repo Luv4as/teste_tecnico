@@ -17,7 +17,7 @@ interface ProfileCardProps{
           <Image width={500} height={500} src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt="{character.name}"></Image>
         </CardHeader>
         <CardBody placeholder={'corpo do card'} className="text-center">
-          <Typography placeholder={'Nome do Personagem'} variant="h4" color="blue-gray" className="mb-2">
+          <Typography placeholder={'Nome do Personagem'} variant="h4" color="blue-gray" className="mb-2 font-roboto font-semibold">
             {character.name}
           </Typography>
         </CardBody>

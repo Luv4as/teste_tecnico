@@ -16,8 +16,8 @@ module.exports = withMT({
       // },
       fontFamily:{
         'roboto': ['var(--font-roboto)'],
-        'bebas-neue': ["Bebas Neue", 'sans-serif'],
-        'archivo-black': [ "Archivo Black", 'sans-serif']
+        'bebas-neue': ['var(--font-bebas-neue)'],
+        'archivo-black': [ 'var(--font-archivo-black)'],
       }
     },
   },

@@ -1,5 +1,6 @@
 'use client'
-import { Input } from "@material-tailwind/react";
+
+import { Button, Input } from "@material-tailwind/react";
 import { useState, KeyboardEvent } from "react";
 import logo from 'C:/Users/lucas/Documents/teste_tecnico/marvel-heroes/public/images/Marvel-logo.png'
 import Image from "next/image";
@@ -21,19 +22,21 @@ export default function Navbar(){
     return(
       <div className="w-full h-14  bg-[#9C3636]">
         <div className="container px-4 h-full">
-          <div className="flex justify-between items-center h-full">
-            <a href="/">
+          <div className="flex flex-row justify-between items-center h-full">
+            <a href="/" className="ml-14">
               <Image alt="Logo Marvel" src={logo} height={300} width={300} className="w-20 h-10"></Image>
             </a>
             
             <div>
-                <input 
-                 value={querySearch} 
-                 type="text" 
-                 placeholder="  Pesquisar"
-                 onChange={(e => setQuerySearch(e.target.value))} 
-                 onKeyDown={handleSearch}
-                 className="rounded-lg h-7" ></input>
+                 <Input 
+                  crossOrigin={'/search'}
+                  type="search"
+                  label="Pesquisa"
+                  color="white"
+                  value={querySearch}
+                  onChange={(e => setQuerySearch(e.target.value))}
+                  onKeyDown={handleSearch}
+                  ></Input>
             </div>
           </div>
         </div>

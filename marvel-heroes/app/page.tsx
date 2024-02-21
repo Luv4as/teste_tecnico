@@ -11,8 +11,8 @@ export default async function Home() {
       <Navbar></Navbar>    
       <div>
         <div className="flex flex-col justify-center items-center">
-          <h1 className="my-10 font-bold">BEM VINDO AO MARVEL HEROES!</h1>
-          <p className="font-normal">Veja a lista alfabética completa de personagens disponíveis</p>
+          <h1 className="my-10 text-6xl font-bebas-neue">BEM VINDO AO MARVEL HEROES!</h1>
+          <p className="font-roboto">Veja a lista alfabética completa de personagens disponíveis</p>
         </div>
         
         <div className="flex flex-col justify-evenly items-center">
