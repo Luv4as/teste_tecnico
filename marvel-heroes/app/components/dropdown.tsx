@@ -5,9 +5,9 @@ export function Dropdown() {
   return (
     <div className="w-72">
       <Select label="Selecione o filtro" placeholder={'opções de filtro'}>
-        <Option>Material Tailwind HTML</Option>
-        <Option>Material Tailwind React</Option>
-        <Option>Material Tailwind Vue</Option>
+        <a href="/"><Option index={1} >Ordenar de: a-z</Option></a>
+        <Option index={2}>Ordenar de: z-a</Option>
+        <Option index={3}>Material Tailwind Vue</Option>
       </Select>
     </div>
   );
