@@ -1,11 +1,13 @@
 import  Navbar  from "./components/navbar";
 import { ProfileCard } from "./components/profileCard";
-import { getCharacters } from "@/utils/api";
+import { getCharacters, } from "@/utils/api";
+
 
 export default async function Home() {
   const characters = await getCharacters();
+  //const comics = await getCharactersComics(Number(characters.results.map(character=>(character.id))));
 
-  return (
+  return ( 
     <main className="-ml-2">
       <Navbar></Navbar>    
       <div>

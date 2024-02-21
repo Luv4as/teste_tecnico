@@ -1,9 +1,11 @@
 import React, { FC } from "react";
 import { Character } from "@/types/marvels";
+import Image from "next/image";
 import {Button, Dialog, DialogHeader, DialogBody, DialogFooter} from "@material-tailwind/react";
 
 interface ModalProps {
   character: Character
+
 }
  
 export const ModalBt:FC<ModalProps> = ({ character }) => {
@@ -20,6 +22,10 @@ export const ModalBt:FC<ModalProps> = ({ character }) => {
         <DialogHeader placeholder={'Titulo do Modal'}>{character.name}</DialogHeader>
         <DialogBody placeholder={'Mensagem completa do modal'}>
           {character.description}
+          <div>
+            <p className="mt-5">Comics in witch they appear: {character.comics.available}</p>
+            {/* <Image alt="{comic.title}" src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}></Image> */}
+          </div>
         </DialogBody>
         <DialogFooter placeholder={'Footer do Modal'}>
           <Button

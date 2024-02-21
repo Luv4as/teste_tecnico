@@ -27,6 +27,13 @@ export const getCharacters = async (): Promise<CharacterDataWrapper> => {
     return handleResponse<CharacterDataWrapper>(response);
 }
 
+// export const getCharactersComics = async (characterId: number): Promise<ComicDataWrapper> => {
+//     const url = `${API_BASE_URL}/characters?characterId=${characterId}&limit=99&${query}`;
+//     const response = await fetch(url);
+//     return handleResponse<ComicDataWrapper>(response);
+// }
+
+
 export const searchCharacters = async (querySearch: string | null): Promise<CharacterDataWrapper> => {
     const url = `${API_BASE_URL}/characters?nameStartsWith=${querySearch}&limit=99&${query}`;
     const response = await fetch(url);

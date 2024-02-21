@@ -7,10 +7,11 @@ import { FC } from "react";
 
 interface ProfileCardProps{
   character: Character
+
 }
    
   export const ProfileCard: FC<ProfileCardProps>= ({ character }) => {
-    // console.log(character)
+    console.log(character)
     return (
       <Card className="w-96" placeholder={'card de infos do personagem'}>
         <CardHeader floated={false} className="h-80" placeholder={'Imagem do personagem'}>
