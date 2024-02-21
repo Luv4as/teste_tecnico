@@ -33,8 +33,14 @@ export const searchCharacters = async (querySearch: string | null): Promise<Char
     return handleResponse<CharacterDataWrapper>(response);
 }
 
-export const orderDescCharacters = async (querySearch: string | null): Promise<CharacterDataWrapper> => {
-    const url = `${API_BASE_URL}/characters?orderBy-name=${querySearch}&limit=99&${query}`;
+export const orderDescCharacters = async (): Promise<CharacterDataWrapper> => {
+    const url = `${API_BASE_URL}/characters?orderBy=-name&limit=99&${query}`;
+    const response = await fetch(url);
+    return handleResponse<CharacterDataWrapper>(response);
+}
+
+export const orderModCharacters = async (): Promise<CharacterDataWrapper> => {
+    const url = `${API_BASE_URL}/characters?orderBy=modified&limit=99&${query}`;
     const response = await fetch(url);
     return handleResponse<CharacterDataWrapper>(response);
 }

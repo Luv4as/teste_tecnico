@@ -34,7 +34,6 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={roboto.className}>{children}
-        <h1 className={bebas_neue.className}>{children}</h1>
       </body>
     </html>
   );

@@ -1,18 +1,18 @@
-import { Dropdown } from "./components/dropdown";
-import  Navbar  from "./components/navbar";
-import { ProfileCard } from "./components/profileCard";
-import { getCharacters } from "@/utils/api";
+import { Dropdown } from "../components/dropdown";
+import  Navbar  from "../components/navbar";
+import { ProfileCard } from "../components/profileCard";
+import { orderModCharacters } from "@/utils/api";
 
 export default async function Home() {
-  const characters = await getCharacters();
+  const modifiedCharacters = await orderModCharacters();
 
   return (
     <main className="-ml-2">
       <Navbar></Navbar>    
       <div>
         <div className="flex flex-col justify-center items-center">
-          <h1 className="my-10 font-bold">BEM VINDO AO MARVEL HEROES!</h1>
-          <p className="font-normal">Veja a lista alfabética completa de personagens disponíveis</p>
+          <h1 className="my-10 ">BEM VINDO AO MARVEL HEROES!</h1>
+          <p className="font-medium">Veja a lista de personagens modificados recentemenre</p>
         </div>
         
         <div className="flex flex-col justify-evenly items-center">
@@ -20,7 +20,7 @@ export default async function Home() {
             <div className="flex flex-col justify-end items-end my-9 mb-5 mr-5 col-span-3">
               <Dropdown></Dropdown>         
             </div>
-            {characters.results.map(character =>(
+            {modifiedCharacters.results.map(character =>(
               <ProfileCard key={character.id} character={character} ></ProfileCard>
             ))}
           </div>
