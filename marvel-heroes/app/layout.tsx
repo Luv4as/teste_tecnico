@@ -9,17 +9,17 @@ const roboto = Roboto({
   variable: '--font-roboto'
 });
 
-// const bebas_neue = Bebas_Neue({
-//   subsets: ["latin"],
-//   weight: ["400"],
-//   variable: '--font-bebas-neue'
-// })
+const bebas_neue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: '--font-bebas-neue'
+})
 
-// const archivo_black = Archivo_Black({
-//   subsets: ["latin"],
-//   weight: ["400"],
-//   variable: '--font-archivo-black'
-// })
+const archivo_black = Archivo_Black({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: '--font-archivo-black'
+})
 
 export const metadata: Metadata = {
   title: "Marvel Heroes",
@@ -33,7 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>{children}
+        <h1 className={bebas_neue.className}>{children}</h1>
+      </body>
     </html>
   );
 }

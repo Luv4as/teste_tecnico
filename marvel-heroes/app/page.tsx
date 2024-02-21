@@ -10,7 +10,7 @@ export default async function Home() {
       <Navbar></Navbar>    
       <div>
         <div className="flex flex-col justify-center items-center">
-          <h1 className="my-10  ">BEM VINDO AO MARVEL HEROES!</h1>
+          <h1 className="my-10 ">BEM VINDO AO MARVEL HEROES!</h1>
           <p className="font-medium">Veja a lista completa de personagens disponíveis</p>
         </div>
         <div className="flex justify-evenly items-center">

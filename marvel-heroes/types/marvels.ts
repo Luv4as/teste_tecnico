@@ -5,7 +5,7 @@ export interface Character {
     thumbnail:{
         path: string,
         extension: string
-    }
+    };
 }
 
 export interface CharacterDataWrapper {
