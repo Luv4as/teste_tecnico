@@ -19,7 +19,7 @@ export default function Navbar(){
   }
 
     return(
-      <div className="w-screen h-14 -mt-2 bg-[#9C3636]">
+      <div className="w-full h-14  bg-[#9C3636]">
         <div className="container px-4 h-full">
           <div className="flex justify-between items-center h-full">
             <a href="/">
@@ -30,10 +30,10 @@ export default function Navbar(){
                 <input 
                  value={querySearch} 
                  type="text" 
-                 placeholder="Escreva aqui"
+                 placeholder="  Pesquisar"
                  onChange={(e => setQuerySearch(e.target.value))} 
                  onKeyDown={handleSearch}
-                 className="rounded-lg h-6" ></input>
+                 className="rounded-lg h-7" ></input>
             </div>
           </div>
         </div>
