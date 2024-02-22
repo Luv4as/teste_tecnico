@@ -1,8 +1,7 @@
 'use client'
+
 import { Select, Option } from "@material-tailwind/react";
-import { useRouter } from 'next/navigation'
-import { useState, MouseEvent } from "react";
- 
+
 export function Dropdown() {
 
   return (

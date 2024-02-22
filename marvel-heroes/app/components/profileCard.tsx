@@ -1,5 +1,5 @@
 'use client'
-import { Card, CardBody, CardFooter, CardHeader, Typography, Button } from "@material-tailwind/react";
+import { Card, CardBody, CardFooter, CardHeader, Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import { ModalBt } from "./modalBt";
 import { Character } from "@/types/marvels";
