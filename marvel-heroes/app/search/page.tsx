@@ -7,8 +7,7 @@ import { searchCharacters } from "@/utils/api";
 import { Character } from "@/types/marvels";
 import { ProfileCard } from "../../components/profileCard";
 
-
- const SearchPage: FC = () => {
+ export default function SearchPage() {
     const searchParams = useSearchParams()
     const querySearch = searchParams.get('query')
     const [characters, setCharacters] = useState<Character[]>([])
@@ -54,5 +53,3 @@ import { ProfileCard } from "../../components/profileCard";
         </div>
     )
 }
-
-export default SearchPage
