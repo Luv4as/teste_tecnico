@@ -15,7 +15,9 @@ module.exports = withMT({
       //     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       // },
       fontFamily:{
-        'roboto': ["Roboto", 'sans-serif']
+        'roboto': ['var(--font-roboto)'],
+        'bebas-neue': ['var(--font-bebas-neue)'],
+        'archivo-black': [ 'var(--font-archivo-black)'],
       }
     },
   },
