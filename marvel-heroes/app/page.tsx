@@ -1,6 +1,6 @@
-import { Dropdown } from "./components/dropdown";
-import  Navbar  from "./components/navbar";
-import { ProfileCard } from "./components/profileCard";
+import { Dropdown } from "../components/dropdown";
+import  Navbar  from "../components/navbar";
+import { ProfileCard } from "../components/profileCard";
 import { getCharacters } from "@/utils/api";
 
 export default async function Home() {
