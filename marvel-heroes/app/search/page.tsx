@@ -1,11 +1,11 @@
 'use client'
 
 import { FC, useEffect, useState } from "react";
-import Navbar from "../components/navbar";
+import Navbar from "../../components/navbar";
 import { useSearchParams } from "next/navigation";
 import { searchCharacters } from "@/utils/api";
 import { Character } from "@/types/marvels";
-import { ProfileCard } from "../components/profileCard";
+import { ProfileCard } from "../../components/profileCard";
 
 
  const SearchPage: FC = () => {
