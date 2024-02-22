@@ -2,10 +2,9 @@
 
 import { Button, Input } from "@material-tailwind/react";
 import { useState, KeyboardEvent } from "react";
-import logo from 'C:/Users/lucas/Documents/teste_tecnico/marvel-heroes/public/images/Marvel-logo.png'
+import logo from '.././../public/images/Marvel-logo.png' 
 import Image from "next/image";
 import { useRouter } from 'next/navigation'
-
 
 export default function Navbar(){
   const router = useRouter()
