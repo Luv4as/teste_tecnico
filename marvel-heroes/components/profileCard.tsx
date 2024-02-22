@@ -1,9 +1,9 @@
 'use client'
 import { Card, CardBody, CardFooter, CardHeader, Typography } from "@material-tailwind/react";
-import Image from "next/image";
-import { ModalBt } from "./modalBt";
+import Image from "next/image"; 
 import { Character } from "@/types/marvels";
 import { FC } from "react";
+import ModalBt from "./modalBt";
 
 interface ProfileCardProps{
   character: Character

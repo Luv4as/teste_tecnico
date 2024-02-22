@@ -6,7 +6,7 @@ interface ModalProps {
   character: Character
 }
  
-export const ModalBt:FC<ModalProps> = ({ character }) => {
+const ModalBt:FC<ModalProps> = ({ character }) => {
   const [open, setOpen] = React.useState(false);
  
   const handleOpen = () => setOpen(!open);
@@ -50,3 +50,5 @@ export const ModalBt:FC<ModalProps> = ({ character }) => {
     </div>
   );
 }
+
+export default ModalBt
