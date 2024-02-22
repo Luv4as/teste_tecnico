@@ -33,11 +33,12 @@ import { ProfileCard } from "../../components/profileCard";
     return(
         <div>
             <Navbar></Navbar>
-            <Suspense>
             <div>
                 <div className="flex flex-col justify-center items-center">
                     <h1 className="my-10 text-6xl font-bebas-neue ">BEM VINDO AO MARVEL HEROES!</h1>
-                    <p className="font-medium">Pesquisa por &quot;{querySearch}&quot;</p>
+                    <Suspense>
+                        <p className="font-medium">Pesquisa por &quot;{querySearch}&quot;</p>
+                    </Suspense>
                 </div>
                 {
                     isLoading ? <div className="flex justify-center items-center">
@@ -51,7 +52,6 @@ import { ProfileCard } from "../../components/profileCard";
                     )
                 }
             </div>  
-            </Suspense>
         </div>
     )
 }
