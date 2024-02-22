@@ -1,6 +1,6 @@
 'use client'
 
-import { FC, useEffect, useState } from "react";
+import { FC, Suspense, useEffect, useState } from "react";
 import Navbar from "../../components/navbar";
 import { useSearchParams } from "next/navigation";
 import { searchCharacters } from "@/utils/api";
@@ -33,6 +33,7 @@ import { ProfileCard } from "../../components/profileCard";
     return(
         <div>
             <Navbar></Navbar>
+            <Suspense>
             <div>
                 <div className="flex flex-col justify-center items-center">
                     <h1 className="my-10 text-6xl font-bebas-neue ">BEM VINDO AO MARVEL HEROES!</h1>
@@ -50,6 +51,7 @@ import { ProfileCard } from "../../components/profileCard";
                     )
                 }
             </div>  
+            </Suspense>
         </div>
     )
 }
