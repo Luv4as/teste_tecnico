@@ -12,7 +12,7 @@ interface ProfileCardProps{
   export const ProfileCard: FC<ProfileCardProps>= ({ character }) => {
     // console.log(character)
     return (
-      <Card className="w-96" placeholder={'card de infos do personagem'}>
+      <Card className="md:w-96 sm:" placeholder={'card de infos do personagem'}>
         <CardHeader floated={false} className="h-80" placeholder={'Imagem do personagem'}>
           <Image width={500} height={500} src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt="{character.name}"></Image>
         </CardHeader>

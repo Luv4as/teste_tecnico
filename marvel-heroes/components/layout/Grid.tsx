@@ -17,7 +17,7 @@ export default function Grid(props: GridProps){
             ${props.lg ? `lg:grid-cols-${props.lg}`: ''}
             ${props.xl ? `xl:grid-cols-${props.xl}`: ''}
             ${props.xl2 ? `2xl:grid-cols-${props.xl2}`: ''}
-            w-full 
+            w-full gap-4
         `}>
             {props.children}
         </div>
