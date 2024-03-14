@@ -19,13 +19,12 @@ export default function Navbar(){
   }
 
     return(
-      <div className="w-full h-14  bg-[#9C3636]">
+      <div className="w-screen h-14 bg-[#9C3636]">
         <div className="container px-4 h-full">
-          <div className="flex flex-row justify-between items-center h-full">
+          <div className="flex flex-row justify-between items-center h-full gap-4">
             <a href="/" className="ml-14">
               <Image alt="Logo Marvel" src={logo} height={300} width={300} className="w-20 h-10"></Image>
             </a>
-            
             <div>
                  <Input 
                   crossOrigin={'/search'}
