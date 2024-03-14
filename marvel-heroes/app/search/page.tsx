@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { searchCharacters } from "@/utils/api";
 import { Character } from "@/types/marvels";
 import { ProfileCard } from "../../components/profileCard";
+import Grid from "@/components/layout/Grid";
 
  export default function SearchPage() {
     const searchParams = useSearchParams()
@@ -33,21 +34,22 @@ import { ProfileCard } from "../../components/profileCard";
     return(
         <div>
             <Navbar></Navbar>
-            <div>
-                <div className="flex flex-col justify-center items-center">
-                    <h1 className="my-10 text-6xl font-bebas-neue ">BEM VINDO AO MARVEL HEROES!</h1>
+                <div className="flex flex-col justify-center items-center gap-10">
+                    <h1 className="mt-10 md:text-6xl sm:text-4xl font-bebas-neue">BEM VINDO AO MARVEL HEROES!</h1>
                     <Suspense>
-                        <p className="font-medium">Pesquisa por &quot;{querySearch}&quot;</p>
+                        <p className="font-roboto sm:text-sm md:text-base">Pesquisa por &quot;{querySearch}&quot;</p>
                     </Suspense>
-                </div>
                 {
-                    isLoading ? <div className="flex justify-center items-center">
-                        <p className="text-3xl mt-40">Carregando...</p>
-                    </div> : (
-                        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    isLoading ? 
+                        <div className="flex justify-center items-center">
+                            <p className="text-3xl mt-40">Carregando...</p>
+                        </div> : (
+                        <div className="w-[90%] lg:w-4/5">
+                            <Grid cols={1} sm={1} md={3}>
                             {characters.map(character =>(
                                 <ProfileCard key={character.id} character={character} ></ProfileCard>
-                            ))}
+                                ))}
+                            </Grid>
                         </div>
                     )
                 }
