@@ -1,6 +1,6 @@
-# Test Técnico Merx energia
+# Marvel Heroes
 
-Esse é um teste técnico para o processo seletivo de estágio para a empresa Merx Energia
+Marvel Heroes é um site para ver herois do universo Marvel com listagem filtros e pesquisas
 
 ## Tecnologias usadas
 * Typescript
